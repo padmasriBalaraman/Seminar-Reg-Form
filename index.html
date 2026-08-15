@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Seminar Registration</title>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- ================= HEADER ================= -->
+
+        <header class="header">
+
+            <div class="header-icon">
+                🎓
+            </div>
+
+            <h1>Seminar Registration</h1>
+
+            <p>
+                Welcome to the Seminar Registration Portal.
+                Please provide your details carefully to complete
+                your registration.
+            </p>
+
+        </header>
+
+
+        <!-- ================= REGISTRATION FORM ================= -->
+
+        <main class="form-container" id="formContainer">
+
+            <form id="seminarForm">
+
+                <!-- PARTICIPANT INFORMATION -->
+
+                <h2 class="section-title">
+                    👤 Participant Information
+                </h2>
+
+
+                <!-- FULL NAME -->
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Full Name
+                        <span class="required">*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email ID
+                        <span class="required">*</span>
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="example@gmail.com"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- PHONE NUMBER -->
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone Number
+                        <span class="required">*</span>
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter 10-digit phone number"
+                        maxlength="10"
+                        required
+                    >
+
+                    <small>
+                        Please enter a valid 10-digit mobile number.
+                    </small>
+
+                </div>
+
+
+                <!-- ================= ACADEMIC INFORMATION ================= -->
+
+                <h2 class="section-title">
+                    🎓 Academic Information
+                </h2>
+
+
+                <!-- DEPARTMENT -->
+
+                <div class="form-group">
+
+                    <label for="department">
+                        Department
+                        <span class="required">*</span>
+                    </label>
+
+                    <select
+                        id="department"
+                        name="department"
+                        required
+                    >
+
+                        <option value="">
+                            Select your department
+                        </option>
+
+                        <option>
+                            Computer Science and Engineering
+                        </option>
+
+                        <option>
+                            Information Technology
+                        </option>
+
+                        <option>
+                            Electronics and Communication Engineering
+                        </option>
+
+                        <option>
+                            Electrical and Electronics Engineering
+                        </option>
+
+                        <option>
+                            Mechanical Engineering
+                        </option>
+
+                        <option>
+                            Civil Engineering
+                        </option>
+
+                        <option>
+                            Artificial Intelligence and Data Science
+                        </option>
+
+                        <option>
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- YEAR -->
+
+                <div class="form-group">
+
+                    <label for="year">
+                        Year of Study
+                        <span class="required">*</span>
+                    </label>
+
+                    <select
+                        id="year"
+                        name="year"
+                        required
+                    >
+
+                        <option value="">
+                            Select your year
+                        </option>
+
+                        <option value="1st Year">
+                            1st Year
+                        </option>
+
+                        <option value="2nd Year">
+                            2nd Year
+                        </option>
+
+                        <option value="3rd Year">
+                            3rd Year
+                        </option>
+
+                        <option value="4th Year">
+                            4th Year
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- COLLEGE NAME -->
+
+                <div class="form-group">
+
+                    <label for="college">
+                        College Name
+                        <span class="required">*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        id="college"
+                        name="college"
+                        placeholder="Enter your college name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- ================= SEMINAR DETAILS ================= -->
+
+                <h2 class="section-title">
+                    📝 Seminar Details
+                </h2>
+
+
+                <!-- SEMINAR TOPIC -->
+
+                <div class="form-group">
+
+                    <label for="topic">
+                        Seminar Topic
+                        <span class="required">*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        id="topic"
+                        name="topic"
+                        placeholder="Enter the seminar topic"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- REGISTRATION TYPE -->
+
+                <div class="form-group">
+
+                    <label>
+                        Registration Type
+                        <span class="required">*</span>
+                    </label>
+
+                    <div class="radio-container">
+
+                        <label class="radio-option">
+
+                            <input
+                                type="radio"
+                                name="registrationType"
+                                value="Individual"
+                                required
+                            >
+
+                            <span>
+                                👤 Individual
+                            </span>
+
+                        </label>
+
+
+                        <label class="radio-option">
+
+                            <input
+                                type="radio"
+                                name="registrationType"
+                                value="Team"
+                            >
+
+                            <span>
+                                👥 Team
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+    <!-- TEAM NAME -->
+
+                <div
+                    class="form-group"
+                    id="teamNameSection"
+                    style="display: none;"
+                >
+
+                    <label for="teamName">
+                        Team Name
+                        <span class="required">*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        id="teamName"
+                        name="teamName"
+                        placeholder="Enter your team name"
+                    >
+
+                    <small>
+                        Required only for team registration.
+                    </small>
+
+                </div>
+
+
+    <!-- ================= ADDITIONAL INFORMATION ================= -->
+
+                <h2 class="section-title">
+                    🎯 Additional Information
+                </h2>
+
+
+        <!-- EXPECTATIONS -->
+
+                <div class="form-group">
+
+                    <label for="expectations">
+                        Expectations from the Seminar
+                    </label>
+
+                    <textarea
+                        id="expectations"
+                        name="expectations"
+                        placeholder="Tell us what you expect from this seminar..."
+                    ></textarea>
+
+                </div>
+
+
+    <!-- SUBMIT BUTTON -->
+
+                <button
+                    type="submit"
+                    class="submit-btn"
+                >
+                    Submit Registration →
+                </button>
+
+            </form>
+
+        </main>
+
+
+<!-- ================= SUCCESS MESSAGE ================= -->
+
+        <section
+            class="success-message"
+            id="successMessage"
+        >
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h2>
+                Registration Successful!
+            </h2>
+
+            <p>
+                Thank you for registering for the seminar.
+            </p>
+
+            <p>
+                Your details have been successfully submitted.
+            </p>
+
+            <div
+                class="registration-id"
+                id="registrationId"
+            >
+                Registration ID: SEM-00000
+            </div>
+
+            <p>
+                We look forward to your participation!
+            </p>
+
+            <button
+                type="button"
+                class="new-registration"
+                id="newRegistration"
+            >
+                Register Another Participant
+            </button>
+
+        </section>
+
+    </div>
+
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
